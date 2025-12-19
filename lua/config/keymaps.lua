@@ -23,6 +23,9 @@ vim.g.have_nerd_font = true
 -- tab into  space
 vim.opt.expandtab = true
 
+-- disable spellcheck
+vim.opt.spell = false
+
 -- number of spaces to use for each step of (auto)indent
 vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
