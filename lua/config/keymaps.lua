@@ -3,8 +3,8 @@
 -- Add any additional keymaps here
 
 -- Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+--vim.g.mapleader = " "
+--vim.g.maplocalleader = " "
 
 -- research how to nvim transparent_background,
 -- source https://www.reddit.com/r/neovim/comments/1bukmz6/noob_catpuccin_background_not_being_transparent/
@@ -137,9 +137,12 @@ vim.keymap.set("n", "j", "gj")
 vim.keymap.set("n", "k", "gk")
 vim.keymap.set("v", "j", "gj")
 vim.keymap.set("v", "k", "gk")
-
+-- jims custom keymaps
+vim.keymap.set("n", ";", ":", { desc = "remap semicolon to colon" })
+--vim.keymap.set("i", "hh", "<Esc>", { desc = "uu to esc from i" })
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
+--  hh
 
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode

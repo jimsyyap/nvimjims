@@ -1,4 +1,8 @@
-# 💤 LazyVim
+# 💤 TODO
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+## - notes
+
+- vim.g mapleader set on init.lua is joy
+- this lazyvim bday is 19dec25
+
+
