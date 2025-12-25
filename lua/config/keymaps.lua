@@ -143,22 +143,27 @@ vim.keymap.set("v", "k", "gk")
 -- jims custom keymaps
 vim.keymap.set("n", ";", ":", { desc = "remap semicolon to colon" })
 -- jims fold (source grok)
-vim.api.nvim_create_autocmd({ "BufWinLeave", "BufLeave", "WinLeave" }, {
-  pattern = { "*.*" },
-  callback = function()
-    if vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
-      vim.cmd("mkview")
-    end
-  end,
-})
-vim.api.nvim_create_autocmd("BufWinEnter", {
-  pattern = { "*.*" },
-  callback = function()
-    if vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
-      vim.cmd("silent! loadview")
-    end
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "BufWinLeave", "BufLeave", "WinLeave" }, {
+--   pattern = { "*.*" },
+--   callback = function()
+--     if vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
+--       vim.cmd("mkview")
+--     end
+--   end,
+-- })
+-- vim.api.nvim_create_autocmd("BufWinEnter", {
+--   pattern = { "*.*" },
+--   callback = function()
+--     if vim.fn.expand("%") ~= "" and vim.bo.buftype == "" then
+--       vim.cmd("silent! loadview")
+--     end
+--   end,
+-- })
+-- lua/config/keymaps.lua
+-- Open all folds
+vim.keymap.set("n", "zR", require("ufo").openAllFolds)
+-- Close all folds
+vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
 vim.opt.foldmethod = "manual" -- or "indent", "marker", "syntax" based on your preference
 vim.opt.foldenable = true -- Enable folding
 vim.opt.foldlevelstart = 99 -- Start with all folds open (adjust as needed)

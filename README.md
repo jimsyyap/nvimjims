@@ -3,7 +3,7 @@
 
 ## - notes
 
-- code fold? Joy. See keymaps.lua
+- code fold + persistence? Joy. See keymaps.lua and autocmd.lua
 - scrolloff 999 instead of 10
 - vim.g mapleader set on init.lua is joy
 - this lazyvim bday is 19dec25
